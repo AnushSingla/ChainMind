@@ -1,0 +1,294 @@
+.alertCard {
+  background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+  border-radius: 1.5rem;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  box-shadow: 
+    0 10px 25px rgba(59, 130, 246, 0.08),
+    0 4px 12px rgba(0, 0, 0, 0.04),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  border: 2px solid rgba(59, 130, 246, 0.1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.alertCard.active {
+  border-color: #10b981; /* emerald-500 */
+  background: linear-gradient(145deg, #ffffff 0%, #ecfdf5 100%); /* light green bg */
+  box-shadow: 
+    0 15px 35px rgba(16, 185, 129, 0.15),  /* green glow */
+    0 8px 20px rgba(16, 185, 129, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  transform: translateY(-2px);
+}
+
+.alertCard.active::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #10b981, #34d399, #6ee7b7, #10b981); /* green shimmer */
+  background-size: 200% 100%;
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0%, 100% { background-position: 200% 0; }
+  50% { background-position: -200% 0; }
+}
+
+
+.alertCard.inactive {
+  border-color: #e2e8f0;
+  background: linear-gradient(145deg, #f8fafc 0%, #f1f5f9 100%);
+  opacity: 0.8;
+}
+
+.alertHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.alertIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 0.75rem;
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  color: white;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+  transition: all 0.3s ease;
+}
+
+.alertCard.inactive .alertIcon {
+  background: linear-gradient(135deg, #94a3b8 0%, #64748b 100%);
+  box-shadow: 0 4px 12px rgba(148, 163, 184, 0.2);
+}
+
+.alertName {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0;
+  flex: 1;
+  min-width: 0;
+  background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.alertCard.inactive .alertName {
+  background: linear-gradient(135deg, #64748b 0%, #475569 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.alertActions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.editButton {
+  padding: 0.5rem 1rem;
+  background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+  color: #475569;
+  border: 1px solid #cbd5e1;
+  border-radius: 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.editButton:hover {
+  background: linear-gradient(135deg, #e2e8f0 0%, #cbd5e1 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.deleteButton {
+  padding: 0.5rem;
+  background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%);
+  color: #dc2626;
+  border: 1px solid #fecaca;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 4px rgba(220, 38, 38, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.deleteButton:hover {
+  background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(220, 38, 38, 0.15);
+}
+
+.alertDetails {
+  margin-bottom: 1.25rem;
+  background: linear-gradient(145deg, rgba(248, 250, 252, 0.8) 0%, rgba(241, 245, 249, 0.6) 100%);
+  border-radius: 1rem;
+  padding: 1rem;
+  border: 1px solid rgba(226, 232, 240, 0.5);
+}
+
+.alertCard.active .alertDetails {
+  background: linear-gradient(145deg, rgba(240, 247, 255, 0.9) 0%, rgba(248, 250, 252, 0.7) 100%);
+  border-color: rgba(59, 130, 246, 0.1);
+}
+
+.detailItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+  gap: 1rem;
+}
+
+.detailItem:last-child {
+  margin-bottom: 0;
+}
+
+.detailLabel {
+  font-size: 0.9rem;
+  color: #64748b;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.detailValue {
+  font-size: 0.9rem;
+  color: #1e293b;
+  font-weight: 700;
+  text-align: right;
+  background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.alertCard.inactive .detailValue {
+  background: linear-gradient(135deg, #64748b 0%, #475569 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.alertFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+  border-top: 1px solid #e2e8f0;
+  gap: 1rem;
+}
+
+.alertCard.active .alertFooter {
+  border-top-color: rgba(59, 130, 246, 0.2);
+}
+
+.toggleContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.75rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  background: linear-gradient(145deg, rgba(248, 250, 252, 0.8) 0%, rgba(241, 245, 249, 0.6) 100%);
+  border: 1px solid rgba(226, 232, 240, 0.5);
+}
+
+.toggleContainer:hover {
+  background: linear-gradient(145deg, rgba(241, 245, 249, 0.9) 0%, rgba(226, 232, 240, 0.7) 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.alertCard.active .toggleContainer {
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  color: white;
+  border-color: transparent;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+.alertCard.active .toggleContainer:hover {
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  box-shadow: 0 6px 16px rgba(59, 130, 246, 0.4);
+}
+
+.toggleLabel {
+  font-size: 0.875rem;
+  font-weight: 700;
+  transition: color 0.3s ease;
+}
+
+.alertCard.active .toggleLabel {
+  color: white;
+}
+
+.alertCard.inactive .toggleLabel {
+  color: #64748b;
+}
+
+.lastTriggered {
+  font-size: 0.8rem;
+  color: #64748b;
+  font-weight: 600;
+  text-align: right;
+  background: linear-gradient(145deg, rgba(248, 250, 252, 0.8) 0%, rgba(241, 245, 249, 0.6) 100%);
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(226, 232, 240, 0.5);
+}
+
+.alertCard.active .lastTriggered {
+  background: linear-gradient(145deg, rgba(240, 247, 255, 0.9) 0%, rgba(248, 250, 252, 0.7) 100%);
+  border-color: rgba(59, 130, 246, 0.1);
+  color: #475569;
+}
+
+/* Responsive design */
+@media (max-width: 640px) {
+  .alertHeader {
+    gap: 0.75rem;
+  }
+  
+  .alertName {
+    font-size: 1rem;
+  }
+  
+  .detailItem {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+  
+  .detailValue {
+    text-align: left;
+  }
+  
+  .alertFooter {
+    flex-direction: column;
+    gap: 0.75rem;
+    align-items: stretch;
+  }
+  
+  .lastTriggered {
+    text-align: center;
+  }
+}
