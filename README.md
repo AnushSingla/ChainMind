@@ -28,7 +28,7 @@ ChainMind transforms blockchain analysis using natural language. Query wallets, 
 
 ### 1. Clone Repository
 ```bash
-git clone https://github.com/GauravKarakoti/chainmind.git
+git clone https://github.com/AnushSingla/chainmind.git
 cd chainmind
 ```
 2. Install Dependencies
@@ -81,7 +81,7 @@ Try:
 `"Compare UNI vs AAVE trading volume on Ethereum this month"`
 
 ## Code Highlights
-- [/ai/langchain_handler.py](https://github.com/GauravKarakoti/ChainMind/blob/main/ai/langchain_handler.py) - Maps natural language to blockchain operations:
+- [/ai/langchain_handler.py](https://github.com/AnushSingla/ChainMind/blob/main/ai/langchain_handler.py) - Maps natural language to blockchain operations:
 ```python
 def parse_query(query: str) -> dict:
     # Uses LLM to translate query -> API call
@@ -90,7 +90,7 @@ def parse_query(query: str) -> dict:
         "params": {"address": "0x..."}
     }
 ```
-- [/backend/routes/ethereum.js](https://github.com/GauravKarakoti/ChainMind/blob/main/backend/routes/ethereum.js) - Unified blockchain access:
+- [/backend/routes/ethereum.js](https://github.com/AnushSingla/ChainMind/blob/main/backend/routes/ethereum.js) - Unified blockchain access:
 ```javascript
 router.post('/nodit-api', async (req, res) => {
     const response = await axios.post(
@@ -104,7 +104,7 @@ router.post('/nodit-api', async (req, res) => {
     );
 });
 ```
-- [/backend/webhook.js](https://github.com/GauravKarakoti/ChainMind/blob/main/backend/webhook.js) - Webhook handler:
+- [/backend/webhook.js](https://github.com/AnushSingla/ChainMind/blob/main/backend/webhook.js) - Webhook handler:
 ```javascript
 app.post('/webhook/erc20-alerts', (req, res) => {
   if (tx.valueUSD > 10000) {
