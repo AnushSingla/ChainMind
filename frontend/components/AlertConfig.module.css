@@ -1,0 +1,516 @@
+.container {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: 'Inter', sans-serif;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #1f2937;
+}
+
+.form {
+  padding: 24px;
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.formGroup {
+  margin-bottom: 20px;
+}
+
+.formGroupFullWidth {
+  grid-column: span 2;
+}
+
+.label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #333;
+}
+
+.input {
+  width: 300px;
+  padding: 14px 16px;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  font-size: 15px;
+  background: #f9f9f9;
+  transition: all 0.2s;
+}
+
+.input2 {
+  width: 600px;
+  padding: 14px 16px;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  font-size: 15px;
+  background: #f9f9f9;
+  transition: all 0.2s;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #3a7bd5;
+  box-shadow: 0 0 0 3px rgba(58, 123, 213, 0.1);
+}
+
+.select {
+  width: 100%;
+  padding: 14px 16px;
+  padding-right: 40px;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  font-size: 15px;
+  background: #f9f9f9;
+  appearance: none;
+  cursor: pointer;
+}
+
+.select:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+.inputGroup {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.conditionGroup {
+  display: flex;
+  gap: 12px;
+}
+
+.conditionSelect {
+  flex: 1;
+  padding: 14px 16px;
+  padding-right: 40px;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  font-size: 15px;
+  background: #f9f9f9;
+  appearance: none;
+}
+
+.valueInput {
+  width: 100px;
+  padding: 14px;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  font-size: 15px;
+}
+
+.valueInput:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+.header {
+  background: linear-gradient(135deg, #3a7bd5 0%, #00d2ff 100%);
+  padding: 24px;
+  color: white;
+}
+
+.headerContent {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.headerIcon {
+  background: rgba(255, 255, 255, 0.2);
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.headerText h2 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 600;
+  color: white;
+}
+
+.headerText p {
+  margin: 4px 0 0;
+  font-size: 15px;
+  opacity: 0.9;
+  font-weight: 400;
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  color: #64748b;
+  cursor: pointer;
+}
+
+.closeSuggestions {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 11;
+  cursor: pointer;
+  color: #666;
+  font-size: 18px;
+  line-height: 1;
+}
+
+.closeSuggestions:hover {
+  background: #f5f5f5;
+}
+
+.typeGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.typeButton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px 8px;
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.typeButton:hover {
+  border-color: #3a7bd5;
+}
+
+.typeButtonActive {
+  border-color: #3a7bd5;
+  background: rgba(58, 123, 213, 0.05);
+  box-shadow: 0 0 0 1px #3a7bd5;
+}
+
+.typeIcon {
+  margin-bottom: 8px;
+  color: #666;
+}
+
+.typeIconActive {
+  color: #3a7bd5;
+}
+
+.typeLabel {
+  font-size: 14px;
+  font-weight: 500;
+  color: #444;
+}
+
+.typeLabelActive {
+  color: #3a7bd5;
+}
+
+.typeActive {
+  border-color: #6366f1;
+  background-color: #e0e7ff;
+}
+
+.selectContainer {
+  position: relative;
+}
+
+.selectIcon {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #666;
+}
+
+.tokenInputContainer {
+  position: relative;
+}
+
+.suggestions {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  max-height: 200px;
+  overflow-y: auto;
+  padding-top: 30px;
+}
+
+.suggestionItem {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+}
+
+.suggestionItem:hover {
+  background: #f5f5f5;
+}
+
+.tokenLogo {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+.unit {
+  font-size: 14px;
+  color: #666;
+}
+
+.advancedToggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 24px 0;
+  color: #3a7bd5;
+  font-weight: 500;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.advancedToggleText {
+  transition: color 0.2s;
+}
+
+.advancedToggle:hover .advancedToggleText {
+  color: #2a6bc5;
+}
+
+.chevron {
+  color: #3a7bd5;
+  transition: transform 0.2s;
+}
+
+.chevronRotated {
+  transform: rotate(180deg);
+}
+
+.rotated {
+  transform: rotate(180deg);
+}
+
+.advancedSettings {
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 10px;
+  border: 1px solid #e0e0e0;
+  margin-bottom: 20px;
+}
+
+.textarea {
+  width: 600px;
+  min-height: 100px;
+  padding: 14px 16px;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  font-size: 15px;
+  resize: vertical;
+  background: white;
+}
+
+.toggleLabel {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.toggleContainer {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 26px;
+}
+
+.toggleInput {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.toggle:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+.toggleInput:checked + .toggle {
+  background-color: #3a7bd5;
+}
+
+.toggleInput:checked + .toggle:before {
+  transform: translateX(24px);
+}
+
+.toggleText {
+  font-size: 15px;
+  color: #333;
+}
+
+.toggleActive {
+  background: #6366f1;
+}
+
+.toggleActive:before {
+  transform: translateX(16px);
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.cancelButton {
+  padding: 14px 24px;
+  background: white;
+  color: #333;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.cancelButton:hover {
+  background: #f5f5f5;
+}
+
+.buttonIcon {
+  margin-right: 0.5rem;
+}
+
+
+.submitButton {
+  padding: 14px 24px;
+  background: linear-gradient(135deg, #3a7bd5 0%, #00d2ff 100%);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s;
+}
+
+.submitButton:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.submitButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.submitButton:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .formGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .formGroupFullWidth {
+    grid-column: span 1;
+  }
+  
+  .typeGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .conditionGroup {
+    flex-direction: column;
+  }
+  
+  .valueInput {
+    width: 100%;
+  }
+  
+  .inputGroup {
+    flex-direction: column;
+  }
+
+  .suggestions {
+    position: fixed;
+    top: 50%;
+    left: 5%;
+    right: 5%;
+    max-height: 60vh;
+    transform: translateY(-50%);
+    padding-top: 40px;
+  }
+  
+  .closeSuggestions {
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    font-size: 22px;
+  }
+}

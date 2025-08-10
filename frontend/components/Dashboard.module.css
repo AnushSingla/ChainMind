@@ -1,0 +1,252 @@
+.dashboardWrapper {
+  position: relative;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  padding: 1.5rem;
+  margin-top: 1rem;
+}
+
+.closeButton {
+  background: #fef2f2;
+  color: #ef4444;
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-left: auto;
+}
+
+.closeButton:hover {
+  background: #ef4444;
+  color: white;
+  transform: scale(1.1);
+}
+
+.dashboardGrid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.apiBadge {
+  padding: 0.25rem 0.75rem;
+  background-color: #d1fae5;
+  color: #065f46;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.chartCard {
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    background: white;
+    transition: transform 0.2s;
+}
+
+.chartCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+  
+.chartCard h2 {
+    margin-bottom: 1rem;
+    color: #333;
+    font-size: 1.25rem;
+}
+  
+.chartContainer {
+    position: relative;
+    height: 400px; /* Fixed height for all charts */
+    width: 100%;
+}
+
+.header {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.chainBadge {
+    padding: 0.25rem 0.75rem;
+    background-color: #e0e7ff;
+    color: #4f46e5;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+.chartTitle {
+    margin-bottom: 1rem;
+    color: #1f2937;
+    font-size: 1.5rem;
+    text-align: center;
+}
+  
+.nftCard {
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    background: white;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+  
+.nftLine {
+    margin: 0.5rem 0;
+    font-size: 0.95rem;
+    color: #374151;
+}
+  
+.nftContract {
+    color: #4f46e5;
+    font-weight: 500;
+}
+  
+.nftLink {
+    color: #3b82f6;
+    text-decoration: none;
+}
+.nftLink:hover {
+    text-decoration: underline;
+}
+  
+.nftAttributesTitle {
+    margin-top: 1rem;
+    font-weight: 600;
+    color: #111827;
+}
+  
+.nftAttributesList {
+    list-style: disc inside;
+    padding-left: 1rem;
+}
+  
+.nftAttributeItem {
+    margin: 0.25rem 0;
+    color: #4b5563;
+}
+
+/* Add these styles to your CSS file */
+.savedWorkflows {
+  margin-top: 3rem;
+  padding: 2rem;
+  background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+  border-radius: 1.25rem;
+  box-shadow: 0 8px 30px rgba(0, 119, 182, 0.08);
+  border: 1px solid rgba(191, 219, 254, 0.5);
+}
+
+.sectionTitle {
+  color: #0369a1;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid #e0f2fe;
+  font-weight: 700;
+}
+
+.workflowGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.workflowCard {
+  background: white;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  border: 1px solid #e0f2fe;
+  box-shadow: 0 4px 15px rgba(191, 219, 254, 0.2);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.workflowCard:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(191, 219, 254, 0.3);
+}
+
+.workflowCardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.workflowCardHeader h4 {
+  color: #0c4a6e;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0;
+  flex: 1;
+}
+
+.deleteWorkflowButton {
+  background: #fee2e2;
+  color: #ef4444;
+  border: none;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-left: 0.5rem;
+  flex-shrink: 0;
+}
+
+.deleteWorkflowButton:hover {
+  background: #ef4444;
+  color: white;
+  transform: scale(1.1);
+}
+
+.workflowCard p {
+  color: #64748b;
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+
+.runButton {
+  width: 100%;
+  padding: 0.75rem;
+  background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
+  color: white;
+  border: none;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+}
+
+.runButton:hover {
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .workflowGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .savedWorkflows {
+    padding: 1.5rem;
+  }
+}
